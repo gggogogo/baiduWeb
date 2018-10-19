@@ -1,0 +1,139 @@
+/*body{*/
+    /*background-color: black;*/
+    /*padding-left: 100px;*/
+    /*padding-right: 100px;*/
+    /*margin: 0;*/
+/*}*/
+body{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background-color: rgb(51,51,51);
+}
+header nav{
+    float: right;
+
+}
+header ul{
+    margin: 0;
+    height: 42px;
+}
+header li{
+    line-height: 42px;
+    float: left;
+    margin-right: 25px;
+}
+header nav a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #ffffff;
+
+}
+header nav a:hover{
+    color: gray;
+}
+
+.main{
+    background-color: gray;
+    padding: 20px;
+}
+.passage{
+    margin-right: 450px;
+}
+article img{
+    width: 200px;
+    height: 200px;
+}
+article{
+    font-family: "微软雅黑";
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+article:nth-last-child(1) {
+    margin: 0;
+}
+article h2{
+    font-size: 16px;
+}
+ h3{
+    color: gray;
+    font-size: 12px;
+}
+.writer{
+    color: gray;
+    font-size: 10px;
+}
+table{
+    width: 100%;
+    border: 1px solid black;
+    border-spacing: 0;
+}
+th{
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+
+}
+tr td{
+
+    border: 1px solid darkgray;
+}
+tr.sum{
+    background-color: darkgray;
+    color: black;
+}
+aside{
+    background-color: #ffffff;
+    float: right;
+    width: 350px;
+    padding: 20px;
+}
+aside h2{
+    font-size: 16px;
+    border-left: 3px solid gray;
+    padding-left: 10px;
+}
+label{
+    text-align: right;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+input{
+
+}
+.demand{
+    font-size: 12px;
+    color: gray;
+    margin-left: 150px;
+}
+textarea{
+    margin-top: 10px;
+    width: 50%;
+    height: 100px;
+    margin-left: -7px;
+}
+input[type='submit']{
+    width: 100%;
+    height: 40px;
+    background: #3355D0;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    border:1px solid #3355D0;
+    font-weight: 800;
+}
+figure{
+    height:220px;
+    width: 240px;
+    border: 1px solid #aaa;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
