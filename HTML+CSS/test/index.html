@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <style type="text/css">
+        .test{
+            width:0;
+            direction:rtl;
+        }
+        /*.test::before{*/
+        /*content:"abcde 中 abcde";*/
+            /*border:solid 2px blue;*/
+            /*!*outline:solid 2px blue;*!*/
+            /*color:#fff;*/
+        /*}*/
+        /*span{*/
+            /*outline:solid 2px blue;*/
+            /*color:#fff;*/
+        /*}*/
+       span{
+            /*text-align:right;*/
+            /*display: inline-block;*/
+            /*direction:rtl;*/
+           /*writing-mode: vertical-rl;*/
+           /*-webkit-writing-mode: vertical-rl;*/
+            outline:solid 2px blue;
+            color:#fff;
+
+        }
+        .rtl{
+            direction:rtl;
+        }
+        .triangle{
+            position:relative;
+            width:0;
+            height:0;
+            border-left:solid 20px transparent;
+            border-right: solid 20px transparent;
+            border-bottom:solid 40px red;
+            /*transform: translate(1px 1px);*/
+        }
+        /*画空心三角形*/
+        /*.triangle::after{*/
+            /*content:'';*/
+            /*position:absolute;*/
+            /*border-left:solid 20px transparent;*/
+            /*border-right: solid 20px transparent;*/
+            /*border-bottom:solid 40px #fff;*/
+            /*top: 2px;*/
+            /*left: -20px;*/
+        /*}*/
+        /*画空心三角形第二种画法*/
+        .blanktri{
+            width:0;
+            height:0;
+            border-top:solid 10px #000;
+            border-left:solid 10px #000;
+            -webkit-transform: translate(10px 10px);
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="test">
+    <span>abcd 中 abcd</span>
+    <!--<span>中 abcded 中</span>-->
+    <!--<p class="rtl">right-to-left direction.</p>-->
+</div>
+<!--<div class="triangle">-->
+<!--</div>-->
+<!--<div class="blanktri"></div>-->
+</body>
+</html>

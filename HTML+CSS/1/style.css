@@ -1,0 +1,193 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: darkgrey;
+}
+header{
+    background-color: #3b3a3b;
+    widt:100%;
+    height:60px;
+    position:relative;
+}
+span#headlogo img{
+    width:80px;
+    height:45px;
+    float:left;
+    margin-top: 7px;
+    margin-left: 8px;
+
+}
+nav#headnav{
+    margin-left: 1373px;
+
+}
+nav#headnav ul{
+    position: absolute;
+    right:5px;
+height:60px;
+}
+nav#headnav li{
+   display: inline-block;
+    height:60px;
+    text-align:center ;
+    line-height: 60px;、 padding-left: 10px;
+    padding-right:10px;
+}
+nav#headnav li:hover{
+    background-color: #e3e3e3;
+}
+nav#headnav a{
+    text-decoration: none;
+    color:#fff;
+}
+
+article.wz{
+    background-color:white;
+    border:solid 1px lightgoldenrodyellow;
+    margin:20px;
+}
+article.wz h1{
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size:22px;
+}
+article.wz h2{
+    margin-top: 16px;
+    margin-left: 10px;
+    font-size:18px;
+    color:lightgray;
+}
+span.author{
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size:14px;
+    color:lightgray;
+}
+time{
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size:14px;
+    color:lightgray;
+}
+.wz p{
+    margin-left: 10px;
+    text-indent: 32px;
+    line-height: 1.5;
+}
+.wz img{
+    margin-left: 10px;
+}
+.wz img*:not(.wuzuokongbai){
+    margin-left:0;
+}
+.wz li{
+    list-style: none;
+    margin-left: 30px;
+    margin-top:20px;
+}
+
+.wz li.youbiankuang{
+    border:solid 1px darkgray;
+    padding:10px;
+    text-align:center;
+    width: 210px;
+}
+.wz li.youbiankuang:last-child{
+    margin-bottom:40px;
+}
+.wz li.youbiankuang img{
+    margin-left:0;
+    vertical-align:center;
+    margin-top:10px;
+}
+.wz ol.youxu li{
+    counter-increment:mycounter;
+}
+.wz ol.youxu li:before{
+    content:counter(mycounter)'.';
+}
+table {
+    border-collapse:collapse;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:20px;
+}
+td{
+    border-left: 1px solid #e3e3e3;
+    border-top: 1px solid #e3e3e3;
+}
+td:last-child{
+    border-right: 1px solid #e3e3e3;}
+table tr:first-child{
+    background-color: black;
+    color:#fff;
+}
+table tr:last-child td{
+    background-color: #e3e3e3;
+    border-bottom:1px solid #e3e3e3;
+    font-weight:bold;
+}
+article.wz  *:not(article:last-child h2){
+    color:lightgray;
+}
+aside {
+    margin: 20px;
+}
+aside #postadd{
+    margin-right:800px;
+    margin-top:20px;
+}
+aside #password{
+    margin-right:800px;
+    margin-top:20px;
+}
+aside #postadd form{
+    width:400px;
+    margin-left:300px;
+    padding:0;
+}
+aside #password form{
+    margin-left: 332px;
+}
+#inputtip{
+    font-size:14px;
+    color:darkgrey;
+    margin-left: 94px;
+    margin-top: 10px;
+}
+#self-info{
+    margin-top:10px;
+}
+#self-info div{
+    margin-top:10px;
+}
+#self-info div input[type="submit"] {
+    width: 100%;
+    background-color: blue;
+    font-size: 16px;
+    color: white;
+    height: 40px;
+    border: solid 1px grey;
+    border-radius: 12px;
+}
+#self-info div.gender,#self-info div.city,#self-info div.hobby,#self-info div.self-introduction{
+    margin-left:400px;
+}
+#self-info div.self-introduction textarea {
+    height: 50px;
+}
+.inputtips{
+    float: left;
+    text-align: right;
+    width: 7%;
+    padding-right: 15px;
+}
+footer{
+    background-color: black;
+    color:#fff;
+    text-align: center;
+    line-height: 62px;
+    height:62px;
+}

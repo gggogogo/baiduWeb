@@ -1,0 +1,73 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+header{
+    width:100%;
+    background-color: #333;
+}
+header{
+    overflow:hidden;
+    position:relative;
+    height:60px;
+}
+header #headlogo{
+    position:absolute;
+    top:50%;
+    transform: translate(0, -21px);
+    /*vertical-align: center;*/
+    margin-left:40px;
+}
+header #headnav{
+    float:right;
+    height:60px;
+}
+header #headnav li{
+    float:left;   /*将列表水平放置*/
+    padding-right:30px;
+    margin-top:19px;
+    /*display:inline-block;*/
+    /*vertical-align: middle;*/
+
+}
+header #headnav a{
+    text-decoration: none;
+    color:white;
+}
+#bodycontent{
+    background-color: cadetblue;
+    width:100%;margin-top:60px;
+    /*position:relative;*/
+
+}
+
+#rightaside{
+    background: #fff;
+    display:inline-block;
+    width:350px;
+    float:right;
+    margin-top: 40px;
+    margin-right: 10px;
+    padding: 20px;
+
+    /*position:absolute;*/
+    /*top:20px;*/
+    /*right:10px;*/
+}
+article.wz{
+    margin-top: 40px;
+    background-color: #848484;
+    margin-left: 40px;
+    margin-right: 450px;
+    padding: 20px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    box-shadow: 2px 2px 2px #848484;
+}
+footer{
+    width:100%;
+    background-color: #333;
+    /*position:absolute;*/
+    /*bottom:0;*/
+}

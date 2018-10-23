@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:white;
+}
+
+img{
+    width:80px;
+    height:80px;
+    float:left;
+    padding:20px;
+}
+
+ div#info{
+     margin: 0 auto;
+     padding: 20px;
+     background: #eee;
+     border: 1px solid #999;
+     width:100%;
+     overflow:hidden;
+     min-width: 600px;
+     /*display:flex;*/
+     /*background: #eee;*/
+     /*padding: 20px;*/
+     /*border: 1px solid #999;*/
+ }
+
+#teaminfo{
+    float:left;
+    width:200px;
+    border:solid 1px #999;
+}
+#teaminfo p{
+
+    font-size: 14px;
+    margin-top:20px;
+    text-align: center;
+    margin-right:10px;
+}
+#teamintro{
+    /*flex:1;*/
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #999;
+    margin-left:220px;
+    margin-right:140px;
+}
+#teamintro h3{
+    font-size:18px;
+}
+#teamintro p{
+    margin-top:5px;
+}
+#selfinfo{
+    float:right;
+    width:120px;
+    border:solid 1px #999;
+    vertical-align:top;
+}
+/*#teaminfo,#teamintro,#selfinfo{*/
+    /*box-sizing:border-box;*/
+/*}*/
+
+
+
