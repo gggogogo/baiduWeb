@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            box-sizing: border-box;
+            padding:10px ;
+            border:solid 1px #999;
+        }
+        .container:before,.container:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .outer{
+            /*box-sizing: border-box;*/
+            float:left;
+            margin: 10px;
+            /*height: 52px;*/
+            height: 50px;
+            background-color: #eee;
+            border:solid 1px #999 ;
+        }
+        @media screen and (min-width: 769px){
+            .container{
+                width:768px;
+            }
+            .col-md-1{
+                /*outer为boder-box属性，所以不需要减去边框宽度。如果不设置为border-box,则默认为content-box,要减去22px*/
+                width:-webkit-calc(8.33333% - 22px);
+            }
+            .col-md-2{
+                width:-webkit-calc( 16.66667% - 22px);
+            }
+            .col-md-3 {
+                width:-webkit-calc(25% - 22px);
+            }
+            .col-md-4{
+                width:-webkit-calc(33.33333% - 22px);
+            }
+            .col-md-6{
+                width:-webkit-calc(50% - 22px);
+            }
+        }
+        @media  screen and (max-width:768px) {
+            .col-sm-2{
+                width:-webkit-calc(16.66667% - 22px);
+            }
+            .col-sm-3{
+                width:-webkit-calc(25% - 22px);
+            }
+            .col-sm-6{
+                width:-webkit-calc(50% - 22px);
+            }
+            .col-sm-8{
+                width:-webkit-calc(66.66667% - 22px);
+            }
+            .col-sm-12{
+                width:-webkit-calc(100% - 22px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <div class="outer col-md-4 col-sm-6"></div>
+            <div class="outer col-md-4 col-sm-6"></div>
+            <div class="outer col-md-4 col-sm-12"></div>
+
+            <div class="outer col-md-3 col-sm-3"></div>
+            <div class="outer col-md-6 col-sm-6"></div>
+            <div class="outer col-md-3 col-sm-3"></div>
+
+            <div class="outer col-md-1 col-sm-2"></div>
+            <div class="outer col-md-1 col-sm-2"></div>
+            <div class="outer col-md-2 col-sm-8"></div>
+            <div class="outer col-md-2 col-sm-3"></div>
+            <div class="outer col-md-6 col-sm-3"></div>
+
+    </div>
+</body>
+</html>

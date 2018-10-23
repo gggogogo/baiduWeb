@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: block;
+    margin: 10px;
+}
+table{
+    width: 300px;
+    border: #ffffff;
+}
+
+thead tr{
+    background: #000000;
+    color: #ffffff;
+}
+tbody tr:nth-child(odd){
+    background: #ffffff;
+}
+tbody tr:nth-child(even){
+    background: #d1d1d1;
+}
+tbody tr:nth-child(1),tbody tr:nth-child(2),tbody tr:nth-child(3){
+    color: red;
+}
+
+input{
+    width: 100px;
+    border: solid 2px #ddd;
+    margin: 20px;
+    -webkit-transition: border-color,width,0.5s;
+    -moz-transition: border-color,width,0.5s;
+    -ms-transition: border-color,width,0.5s;
+    -o-transition: border-color,width,0.5s;
+    transition: border-color,width,0.5s;
+}
+input:focus{
+    width:200px;
+    border-color: #2189bf;
+}
+
+.main{
+    width: 250px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    background-color:red;
+}
+.sliders{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    animation:slider-init 5s linear;
+}
+.sliders li{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top:0;
+    animation: slider-out 5s linear;
+}
+#slider-1{
+    background: red;
+}
+#slider-2{
+    background: green;
+}
+#slider-3{
+    background: blue;
+}
+.sliders li:target{
+    left: 0%;
+    animation:slider-in 5s linear;
+}
+@keyframes slider-in{
+    0%{
+        left: 100%;
+    }
+    100%{
+        left:0%;
+    }
+}
+@keyframes slider-init{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+@keyframes  slider-out{
+    0%{
+        left: 0%;
+    }
+    100%{
+        left:-100%;
+    }
+}
+.click{
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    right: 0;
+    display: flex;
+}
+.click a{
+    display: block;
+    margin: 0 1px;
+    background-color: rgba(255,255,255,0.5);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 14px;
+}

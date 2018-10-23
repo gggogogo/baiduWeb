@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>task10 Flexbox布局练习</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            border: solid 1px #cccccc;
+        }
+        .one{
+            width: 120px;
+            height: 150px;
+            margin: 20px;
+            border:solid 1px red;
+        }
+        .two{
+            width: 100px;
+            height: 150px;
+            margin: 20px;
+            border:solid 1px red;
+        }
+        .three{
+            width: 100px;
+            height: 40px;
+            margin: 20px;
+            border:solid 1px red;
+        }
+        .four{
+            width: 100px;
+            height: 200px;
+            margin: 20px;
+            border:solid 1px blue;
+        }
+        @media screen and (min-width: 641px) {
+            .container{
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+        @media screen and (max-width: 641px){
+            .container{
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            .one{
+                order: 2;
+            }
+            .two{
+                order: 3;
+            }
+            .three{
+                order: 4;
+            }
+            .four{
+                order: 1;
+
+            }
+
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+</div>
+</body>
+</html>

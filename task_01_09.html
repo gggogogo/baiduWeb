@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>task9 使用HTML/CSS实现一个复杂页面</title>
+    <link rel="stylesheet" href="css/task_01_09.css"/>
+</head>
+<body>
+    <div id="header_wrapper">
+        <header>
+            <div class="logo">
+                <img src="images/task_01_09/task_1_9_1_03.jpg" alt=""/>
+            </div>
+            <div class="search">
+                <form action="task_01_09.html">
+                    <input type="text"><img src="images/task_01_09/task_1_9_1_08.jpg" alt=""/><a href="/">登录</a>
+                </form>
+            </div>
+        </header>
+    </div>
+    <div id="body_wrapper">
+        <aside>
+            <section id="user_info">
+                <div class="photo-name">
+                    <div class="photo">
+                        <div class="circle"></div>
+                    </div>
+                    <p class="name">LeicaYi</p>
+                </div>
+                <div class="c-f">
+                    <div class="collection"><a href="/">110<br/><small>收藏</small></a></div>
+                    <div class="fans"><a href="/">313<br/><small>粉丝</small></a></div>
+                </div>
+            </section>
+            <section id="list">
+                <ul class="main">
+                    <li class="one">
+                        <span class="glyphicon glyphicon-list-alt"></span><a href="/">个人报表</a>
+                        <ul>
+                            <li class="two"><span class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon glyphicon-folder-open"></span><a href="/">文件一</a></li>
+                            <li class="two">
+                                <span class="glyphicon glyphicon-chevron-down"></span><span class="glyphicon glyphicon-folder-open"></span><a href="/">文件二</a>
+                                <ul>
+                                    <li class="three"><span class="glyphicon glyphicon-align-justify_1"></span><a href="/">文档1</a></li>
+                                    <li class="three"><span class="glyphicon glyphicon-align-justify"></span><a href="/">文档2</a></li>
+                                </ul>
+                            </li>
+                            <li class="two"><span class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon glyphicon-folder-open"></span><a href="/">文件三</a></li>
+                        </ul>
+                    </li>
+                    <li class="one"><span class="glyphicon glyphicon-star"></span><a href="/">个人收藏</a></li>
+                    <li class="one"><span class="glyphicon glyphicon-send"></span><a href="/">我的分享</a></li>
+                    <li class="one"><span class="glyphicon glyphicon-picture"></span><a href="/">图库</a></li>
+                    <li class="one"><span class="glyphicon glyphicon-record"></span><a href="/">成长记录</a></li>
+                    <li class="one"><span class="glyphicon glyphicon-scale"></span><a href="/">账户信息</a></li>
+                </ul>
+            </section>
+        </aside>
+        <div class="content_wrapper">
+            <section id="nav">
+                <ul>
+                    <li>C站 /</li>
+                    <li>个人报表 /</li>
+                    <li>文件一 /</li>
+                    <li>文件二</li>
+                </ul>
+            </section>
+            <div class="content">
+                <form action="">
+                    <div class="row-1">
+                        <div class="query">
+                            <span>查询项</span>
+                            <select>
+                                <option value=" ">第一项</option>
+                            </select>
+                        </div>
+                        <div class="buyer">
+                            <span>买方</span>
+                            <select>
+                                <option>小A</option>
+                            </select>
+                            <span>卖方</span>
+                            <select>
+                                <option>小C</option>
+                            </select>
+                        </div>
+                        <a href="javascript:;" class="change">换</a>
+                        <div class="last">
+                            <span >日期</span>
+                            <select class="w110">
+                                <option>2016-04-01</option>
+                            </select>
+                            <span>总耗时</span>
+                            <select>
+                                <option>8天</option>
+                            </select>
+                            <span>人数</span>
+                            <select>
+                                <option>10人</option>
+                            </select>
+                            <span>成交项</span>
+                            <select class="w110">
+                                <option>10项</option>
+                            </select>
+                        </div>
+                        <input type="submit" value="搜索">
+                    </div>
+                </form>
+                <div class="row-2">
+                    <button class="arrow_left"></button>
+                    <div class="price">
+                        <ul>
+                            <li>
+                                <time>10:00 am</time>
+                                <strong><b>¥</b>1200</strong>
+                            </li>
+                            <li>
+                                <time>11:00 am</time>
+                                <strong><b>¥</b>1300</strong>
+                            </li>
+                            <li>
+                                <time>12:00 am</time>
+                                <strong><b>¥</b>1200</strong>
+                            </li>
+                            <li>
+                                <time>01:00 pm</time>
+                                <strong><b>¥</b>1200</strong>
+                            </li>
+                            <li>
+                                <time>02:00 pm</time>
+                                <strong><b>¥</b>1200</strong>
+                            </li>
+                            <li>
+                                <time>03:00 pm</time>
+                                <strong><b>¥</b>1200</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="arrow_right"></button>
+                    <div class="history_query">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer_wrapper">
+        <footer></footer>
+    </div>
+
+</body>
+</html>

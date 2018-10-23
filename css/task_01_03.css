@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.div{
+    margin: 0 auto;
+    /*自适应调节浏览器宽度，父元素的高度始终为子元素中最高的高度。左右两栏宽度固定，中间一栏根据父元素宽度填充满*/
+    min-width: 800px;
+    overflow: auto;
+    background: #eee;
+    border:solid 1px #999;
+}
+.left{
+    margin: 20px;
+    width: 222px;
+    border:solid 1px #999;
+    background: #ffffff;
+    float:left;
+}
+.left img{
+    display: inline-block;
+    vertical-align: top;
+    padding:10px;
+}
+.team_name{
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 0;
+}
+.right{
+    width:120px;
+    margin:20px;
+    float:right;
+    border:solid 1px #999;
+    background: #ffffff;
+}
+.right img{
+    display: block;
+    padding: 20px 20px 0px 20px;
+}
+.right img:last-child{
+    margin-bottom: 20px;
+}
+.center{
+    border: solid 1px #999999;
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 264px;
+    margin-right: 162px;
+}
+
