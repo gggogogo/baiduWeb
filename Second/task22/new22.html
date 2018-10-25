@@ -1,0 +1,164 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_22</title>
+    <style>
+        .root {
+            display: flex;
+            padding: 20px;
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            margin-bottom: 10px;
+            justify-content: space-between;
+        }
+        .child_1 {
+            display: flex;
+            padding: 20px;
+            width: 450px;
+            height: 260px;
+            border: 1px solid red;
+            justify-content: space-between;
+        }
+        .child_2 {
+            display: flex;
+            padding: 20px;
+            width: 170px;
+            height: 220px;
+            border: 1px solid green;
+            justify-content: space-between;
+        }
+        .child_3 {
+            display: flex;
+            padding: 20px;
+            width: 35px;
+            height: 180px;
+            border: 1px solid blue;
+            justify-content: space-between;
+        }
+        input {
+            margin-left: 400px;
+            width: 50px;
+            height: 40px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="root">
+    <div class="child_1">
+        <div class="child_2">
+            <div class="child_3"></div>
+            <div class="child_3"></div>
+        </div>
+        <div class="child_2">
+            <div class="child_3"></div>
+            <div class="child_3"></div>
+        </div>
+    </div>
+    <div class="child_1">
+        <div class="child_2">
+            <div class="child_3"></div>
+            <div class="child_3"></div>
+        </div>
+        <div class="child_2">
+            <div class="child_3"></div>
+            <div class="child_3"></div>
+        </div>
+    </div>
+</div>
+<input type="button" value="前序">
+<input type="button" value="中序">
+<input type="button" value="后序">
+<script type="text/javascript" >
+    //事件兼容函数
+    function addEventHandler(element,type,handler){
+        if(element.addEventListener){
+            element.addEventListener(type,handler,false);
+        }else if(element.attachEvent){
+            element.attachEvent("on"+type,handler);
+        }else{
+            element["on"+type] = handler;
+        }
+    }
+
+    var btn = document.getElementsByTagName('input');
+    var preBtn = btn[0],
+        inBtn = btn[1],
+        postBtn = btn[2];
+    var root = document.getElementsByClassName('root')[0];
+    var nodeArr = [];
+    var timer;
+    //时间绑定
+    addEventHandler(preBtn, 'click',function(){
+        init();
+        preOder(root);
+        render();
+    });
+    addEventHandler(inBtn, 'click',function(){
+        init();
+        inOrder(root);
+        render();
+    });
+    addEventHandler(postBtn, 'click',function(){
+        init();
+        postOrder(root);
+        render();
+    });
+
+
+    //前序遍历算法
+    function preOder(node){
+        if(!(node==null)){
+            nodeArr.push(node);
+            preOder(node.firstElementChild);
+            preOder(node.lastElementChild);
+        }
+    }
+    //中序遍历算法
+    function inOrder(node){
+        if(node!==null){
+            inOrder(node.firstElementChild);
+            nodeArr.push(node);
+            inOrder(node.lastElementChild);
+        }
+    }
+    //后序遍历算法
+    function postOrder(node){
+        if(node!==null){
+            postOrder(node.firstElementChild);
+            postOrder(node.lastElementChild);
+            nodeArr.push(node);
+        }
+    }
+    //初始化
+    function init(){
+        nodeArr = [];
+        clearInterval(timer);
+        var divs = document.getElementsByTagName('div');
+        for(var i =0;i<divs.length;i++){
+            divs[i].style.backgroundColor = '#ffffff';
+        }
+    }
+    //渲染
+    function render(){
+        var i = 0;
+        nodeArr[i].style.backgroundColor = 'pink';
+        timer = setInterval(function(){
+            i++;
+            if(i<nodeArr.length){
+                nodeArr[i-1].style.backgroundColor = "#fff";
+                nodeArr[i].style.backgroundColor = 'pink';
+            }else{
+                clearInterval(timer);
+                nodeArr[nodeArr.length-1].style.backgroundColor = "#fff";
+            }
+        },500);
+    }
+
+
+
+</script>
+</body>
+</html>

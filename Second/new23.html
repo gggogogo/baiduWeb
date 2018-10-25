@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style >
+        *{
+            font-size: 10px;
+        }
+        div{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 1px solid;
+            background-color: #fff;
+        }
+        #big{
+            border: none;
+        }
+        #choose{
+            margin-top:30px;
+        }
+        .one{
+            width: 1600px;
+            height: 500px;
+            margin: 0 auto;
+            border-color: gray;
+        }
+        .two{
+            height:400px ;
+            border-color:lightsteelblue;
+        }
+        .fruit{width: 700px;}
+        .note{width: 700px;}
+        .fish{width: 50px;}
+        .three{
+            height: 300px;
+            border-color:darkgreen;
+        }
+        .apple{width: 350px;}
+        .phone{width: 50px;}
+        .human{width: 300px;}
+        .program{width: 300px;}
+        .blank{width: 150px}
+        .four{
+            height: 200px;
+            border-color:orangered;
+        }
+        .peor{width: 50px;}
+        .pig{width: 50px;}
+        .cola{width: 50px;}
+        .soccer{width: 50px;}
+        .book{width: 50px;}
+        .school{width: 50px;}
+        .code{width: 50px;}
+        .operate{width: 50px;}
+        .man{width: 50px;}
+        .bement{width: 130px;}
+        .glass{width: 50px;}
+        .five{
+            height: 100px;
+            border-color:#ffff00;
+        }
+        .cot{width: 50px;}
+
+
+    </style>
+</head>
+<body>
+<div id="big">
+    <div class="one" id="super">
+        super
+        <div class="two fruit" id="fruit">
+            fruit
+            <div class="three apple" id="apple">
+                apple
+                <div class="four peor" id="peor">peor</div>
+                <div class="four pig" id="pig" >pig</div>
+                <div class="four cola"  id="cola">cola</div>
+                <div class="four soccer"  id="soccer">soccer</div>
+            </div>
+            <div class="three phone"  id="phone">
+                phone
+            </div>
+            <div class="three blank">
+                <div class="four book"  id="book">book</div>
+                <div class="four school"  id="school">school</div>
+            </div>
+        </div>
+        <div class="two note"  id="note">
+            note
+            <div class="three human"  id="human">
+                human
+                <div class="four code"  id="code">code</div>
+                <div class="four operate"  id="operate">operate</div>
+                <div class="four man"  id="man">man</div>
+            </div>
+            <div class="three program" id="program" >
+                program
+                <div class="four bement" id="bement">
+                    bement
+                    <div class="five cot" id="cot">cot</div>
+                </div>
+                <div class="four glass" id="glass">glass</div>
+            </div>
+        </div>
+        <div class="two fish" id="fish">
+            fish
+        </div>
+    </div>
+</div>
+
+
+<fieldset id="choose">
+    <button id="DF">深度遍历</button>
+    <!--<button id="WF">广度遍历</button>-->
+    <input type="text" id="search"><button id="searchBtn">开始查询</button>
+</fieldset>
+
+<script type="text/javascript">
+    window.onload = function(){
+        //事件兼容函数
+        function addEventHandler(element,type,handler){
+            if(element.addEventListener){
+                element.addEventListener(type,handler,false);
+            }else if(element.attachEvent){
+                element.attachEvent("on"+type,handler);
+            }else{
+                element["on"+type] = handler;
+            }
+        }
+        var btnDF = document.getElementById('DF');
+        var  btnWF= document.getElementById('WF');
+        var searchBtn = document.getElementById('searchBtn');
+        var timer;
+        var nodeArr = [];
+        var father = document.getElementById('super');
+
+
+        //绑定事件
+        addEventHandler(btnDF, 'click',function(){
+            init();
+            deepTraversal(father);
+            render();
+
+        });
+        addEventHandler(searchBtn,'click',function(){
+            init();
+            deepTraversal(father);
+            search();
+        });
+/*        addEventHandler(btnWF, 'click',function(){
+            init();
+            wideTraversal(father);
+            render();
+        });*/
+/*        function search (){
+            var oInput =document.getElementById('search').value;
+            for(var i in nodeArr){
+                if(oInput ==nodeArr[i].id){
+                    nodeArr[i].style.backgroundColor = 'red';
+                }
+            }
+        }*/
+        //搜索函数
+        function search(){
+            var oInput =document.getElementById('search').value;
+            var i = 0;
+            nodeArr[i].style.backgroundColor = 'pink';
+
+            timer = setInterval(function(){
+                i++;
+                if(i<nodeArr.length){
+                    if(nodeArr[i].id==oInput){
+                        nodeArr[i-1].style.backgroundColor = "#fff";
+                        nodeArr[i].style.backgroundColor = 'red';
+                        nodeArr[i].checkFlag = true;
+                    }else{
+                        if(nodeArr[i-1].checkFlag!==true){
+                            nodeArr[i-1].style.backgroundColor = "#fff";
+                        }
+                        nodeArr[i].style.backgroundColor = 'pink';
+                    }
+                }else{
+                    clearInterval(timer);
+                    nodeArr[nodeArr.length-1].style.backgroundColor = "#fff";
+                }
+            },500);
+        }
+
+        //初始化
+        function init(){
+            nodeArr = [];
+            clearInterval(timer);
+            var divs = document.getElementsByTagName('div');
+            for(var i = 0;i<divs.length;i++){
+                divs[i].style.backgroundColor = '#ffffff';
+            }
+        }
+        //深度遍历算法
+        function deepTraversal(node){
+            if(node!==null){
+                nodeArr.push(node);
+                var children = node.children;
+                for(var i =0;i<children.length;i++){
+                    deepTraversal(children[i]);
+                }
+            }
+            return nodeArr;
+        }
+
+
+   /*     //广度遍历算法
+        function wideTraversal(node){
+            var i =0;
+            if(!(node==null)){
+                nodeArr.push(node);
+                wideTraversal(node.nextElementSibling);
+                node = nodeArr[i++];
+                wideTraversal(node.firstElementChild);
+            }
+            return nodeArr;
+        }*/
+
+        //渲染
+        function render(){
+            var i = 0;
+            nodeArr[i].style.backgroundColor = 'pink';
+            timer = setInterval(function(){
+                i++;
+                if(i<nodeArr.length){
+                    nodeArr[i-1].style.backgroundColor = "#fff";
+                    nodeArr[i].style.backgroundColor = 'pink';
+                }else{
+                    clearInterval(timer);
+                    nodeArr[nodeArr.length-1].style.backgroundColor = "#fff";
+                }
+            },500);
+        }
+    }
+
+
+</script>
+</body>
+</html>
