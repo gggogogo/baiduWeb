@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>任务二十</title>
+    <style type="text/css">
+        #div_wrapper {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+        }
+        
+        #div_wrapper div {
+            background-color: pink;
+            height: 30px;
+            line-height: 30px;
+            min-width: 30px;
+            text-align: center;
+            margin: 5px;
+        }
+        
+        #div_wrapper span {
+            background-color: red;
+        }
+        </style>
+</head>
+<body>
+    <textarea name="area" cols="20" rows="8" id="textarea"></textarea>
+    <input type="button" value="插入" id="btn1">
+    <input type="button" value="查询" id="btn2">
+    <input type="text" id="text">
+    <div id = "div_wrapper"></div>
+
+
+
+    <script src="task20.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- 要求：————*基于任务18进行升级
+    *将新元素输入框从input改为textarea
+    *允许一次批量输入多个内容，格式可以为数字、中文、英文等，
+    *可以通过用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作为不同内容的间隔
+    *增加一个查询文本输入框，和一个查询按钮，当点击查询时，将查询词在各个元素内容中做模糊匹配，
+    *将匹配到的内容进行特殊标识，如文字颜色等。举例，内容中有abcd，查询词为ab或bc，则该内容需要标识 -->

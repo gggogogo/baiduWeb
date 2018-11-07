@@ -1,0 +1,43 @@
+.box{
+    display:flex;
+    border:1px red solid;
+    margin: 0 auto;   
+    padding: 20px;
+    width:1000px;
+    height: 300px;
+    justify-content: space-between;    /* 属性定义了项目在主轴上的对齐方式。 */
+}   
+.inner1{
+    display:flex;
+    border:1px green solid;
+    padding: 20px;
+    width:450px;
+    height: 260px;
+    justify-content: space-between;
+}
+.inner2{
+    display:flex;
+    border:1px rgb(231, 19, 168) solid;
+    padding: 20px;
+    width:150px;
+    height: 220px;
+    margin-left:29px;
+    justify-content: space-between;
+}
+.inner3{
+    display:flex;
+    border:1px blue solid;
+    padding: 20px;
+    width:30px;
+    height: 180px;
+    justify-content: space-between;
+}
+#button_div{
+    text-align: center;
+}
+input[type=button]{
+    height:30px;
+    width:80px;
+    margin-left:10px;
+    background-color: darkgreen;
+}
