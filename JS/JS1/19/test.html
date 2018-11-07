@@ -1,0 +1,78 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <style type="text/css">
+    #wrapper{
+        height:120px;
+        width:2000px;
+        /* position:relative; */
+        display:flex;
+        align-items: flex-end;
+    }
+    .smalldiv{
+        /* position:absolute;
+        bottom:0; */
+        display:inline-block;
+        vertical-align:bottom;
+        height:50px;
+        margin-right:8px;
+        background:gray;
+        
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="smalldiv">12</div>
+        <div class="smalldiv">32</div>
+        <div class="smalldiv">52</div>
+        <div class="smalldiv">25</div>
+
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*第二种*/
+        .child {
+            display:inline-block;
+            width:40px;
+            height:90px;
+            position:absolute;
+            left:10px;
+        }
+
+        /*第三种*/
+        .parent {
+            /* display: flex;
+            align-items: flex-end; */
+            height:120px;
+            positon:relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child" style="height: 200px; width:50px; background-color: red;">red</div>
+        <!-- <div class="child" style="height: 140px; width:50px; background-color: blue;">blue</div>
+        <div class="child" style="height: 100px; width:50px; background-color: yellow;">yellow</div>
+        <div class="child" style="height: 180px; width:50px; background-color: green;">green</div> -->
+    </div>
+</body>
+</html>
+--------------------- 
+作者：dotgua 
+来源：CSDN 
+原文：https://blog.csdn.net/dotmai/article/details/52345721 
+版权声明：本文为博主原创文章，转载请附上博文链接！

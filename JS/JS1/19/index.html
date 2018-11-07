@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        #wrapper{
+             height:120px;
+             /* 利用flex布局 将子div元素底部对齐； */
+             display:flex;
+             align-items:flex-end;
+        }
+        .numwrapper{
+            /* display:inline-block;
+            vertical-align:bottom; */
+            background:gray;
+            width:30px;
+            margin-right:10px;
+            margin-top:4px;
+            
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="InputNum" placeholder="please enter an interger">
+    <input type="button" value="左侧入">
+    <input type="button" value="右侧入">
+    <input type="button" value="左侧出">
+    <input type="button" value="右侧出">
+    <input type="button" value="冒泡排序">
+    <input type="button" value="打乱">
+</body>
+<script src="task.js"></script>
+</html>
