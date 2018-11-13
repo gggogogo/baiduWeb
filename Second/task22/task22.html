@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>二叉树遍历</title>
+    <style>
+        body{
+            width: 100%
+        }
+        div{
+            
+            border: solid 1px black;
+        }
+        .c1{
+            display: flex;
+            width: 1000px;
+            height: 300px;
+            margin: 20px auto;
+        }
+        .c2{
+            display: flex;
+            width: 450px;
+            height: 260px;
+            margin: 20px auto;
+        }
+        .c3{
+            display: flex;
+            width: 170px;
+            height: 220px;
+            margin: 20px auto;
+        }
+        .c4{
+            display: flex;
+            width: 35px;
+            height: 180px;
+            margin: 20px auto;
+        }
+
+        .isChange{
+            background-color: blue;
+        }
+
+        .noChange{
+            background-color: white;
+        }
+    
+        
+
+    </style>
+</head>
+<body>
+    <div class="c1 noChange">
+        <div class="c2 noChange">
+            <div class="c3 noChange">
+                <div class="c4 noChange"></div>
+                <div class="c4 noChange"></div>
+            </div>
+            <div class="c3 noChange">
+                <div class="c4 noChange"></div>
+                <div class="c4 noChange"></div>
+            </div>
+        </div>
+        <div class="c2 noChange">
+                <div class="c3 noChange">
+                    <div class="c4 noChange"></div>
+                    <div class="c4 noChange"></div>
+                </div>
+                <div class="c3 noChange">
+                    <div class="c4 noChange"></div>
+                    <div class="c4 noChange"></div>
+                </div>
+            </div>
+    </div>
+    <button>前序</button>
+    <button>中序</button>
+    <button>后序</button>
+    <script src="../../../Js/main.js"></script>
+    <script src="task22.js"></script>
+</body>
+</html>
