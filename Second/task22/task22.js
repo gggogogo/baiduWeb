@@ -2,7 +2,7 @@
  * @Author: GuoWei
  * @Date: 2018-11-12 15:11:19
  * @LastEditors: GuoWei
- * @LastEditTime: 2018-11-13 21:35:12
+ * @LastEditTime: 2018-11-14 09:32:35
  * @Description: 
  */
 
@@ -106,6 +106,22 @@ function preorderTraversal(root) {
         preorderTraversal(root.lastElementChild);
     }
 }
+function inorderTraversal(root) {
+    if (root) {
+        
+        preorderTraversal(root.firstElementChild);
+        divList.push(root);
+        preorderTraversal(root.lastElementChild);
+    }
+}
+function postorderTraversal(root) {
+    if (root) {
+        preorderTraversal(root.firstElementChild);
+        preorderTraversal(root.lastElementChild);
+        divList.push(root);
+    }
+}
+
 var c1 = document.getElementsByClassName("c1")[0];
 var buttonList = document.getElementsByTagName("button");
 
@@ -114,6 +130,16 @@ window.onload = function () {
     buttonList[0].onclick = function () {
         reset();
         preorderTraversal(c1);
+        changeColor();
+    }
+    buttonList[1].onclick = function () {
+        reset();
+        inorderTraversal(c1);
+        changeColor();
+    }
+    buttonList[2].onclick = function () {
+        reset();
+        postorderTraversal(c1);
         changeColor();
     }
 }
