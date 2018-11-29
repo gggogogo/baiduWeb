@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            font-size: 20px;
+        }
+        #container{
+            margin: 0 auto;
+        }
+        input{
+            margin-top: 30px;
+        }
+        button{
+            width: 100px;
+            height: 40px;
+            margin-left: 194px;
+            margin-top: 10px;
+            background-color: cornflowerblue;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="nameDiv">
+            名称   <input type="text" id="name"><br/>
+            <p id="h1"></p>
+        </div>
+       <div id="passwordDIv">
+           密码   <input type="password" id="password"><br/>
+           <p id="h2"></p>
+       </div>
+        <div id="passwordAgainDiv">
+            密码确认<input type="password" id="passwordAgain"><br/>
+            <p id="h3"></p>
+        </div>
+        <div id="emailDiv">
+            邮箱   <input type="text" id="email"><br/>
+            <p id="h4"></p>
+        </div>
+       <div id="phoneDiv">
+           手机   <input type="text" id="phone"><br/>
+           <p id="h5"></p>
+       </div>
+        <button id="btn">提交</button>
+    </div>
+<script type="text/javascript">
+
+
+
+    window.onload = function(){
+        //事件兼容函数
+        function addEventHandler(element,type,handler){
+            if(element.addEventListener){
+                element.addEventListener(type,handler,false);
+            }else if(element.attachEvent){
+                element.attachEvent("on"+type,handler);
+            }else{
+                element["on"+type] = handler;
+            }
+        }
+
+        var name = document.getElementById('name');
+        var password = document.getElementById('password');
+        var passwordAgain = document.getElementById('passwordAgain');
+        var email = document.getElementById('email');
+        var phone = document.getElementById('phone');
+        var h1 = document.getElementById('h1');
+        var h2 = document.getElementById('h2');
+        var h3 = document.getElementById('h3');
+        var h4 = document.getElementById('h4');
+        var h5 = document.getElementById('h5');
+        var btn = document.getElementById('btn');
+        var flag1,flag2,flag3,flag4,flag5= false;
+
+        function checkColorChange(requirement,h,rightStr,input,flag,wrongStr){
+            if(requirement){
+                h.innerHTML = rightStr;
+                h.style.color = 'green';
+                input.style.borderColor = 'green';
+                flag = true;
+            }else{
+                h.innerHTML = wrongStr;
+                h.style.color='red';
+                input.style.borderColor = 'red';
+            }
+            return flag;
+        }
+
+        function focusColor(h,focusStr){
+            h.innerHTML =focusStr ;
+            h1.style.borderColor = 'blue';
+        }
+
+
+        //part1名称部分
+        name.onfocus = function(){
+            focusColor(h1,'名称不能为空！');
+        }
+        name.onblur = function(){
+            var r1;
+            if(name.value.length>3&&name.value.length<17){
+                r1= true;
+            }
+            flag1 = checkColorChange(r1,h1,'名称可用',name,flag1, '名称格式有误');
+            //alert(flag1);
+           /* h1.innerHTML = '';
+            checkName(name.value);*/
+        }
+
+        //part2密码部分
+        password.onfocus = function (){
+            focusColor(h2,'必填，密码为4-16的字母数字！');
+        }
+        password.onblur = function (){
+            var passwordPattern = /^[a-zA-Z0-9]{4,16}$/;
+            var r2 =  passwordPattern.test(password.value);
+            flag2= checkColorChange(r2,h2,'密码可用',password,flag2, '密码不可用');
+        }
+
+        //part3密码确认部分
+        passwordAgain.onfocus = function (){
+            focusColor(h3,'再次输入相同密码！');
+        }
+        passwordAgain.onblur = function (){
+            var r3;
+            if(passwordAgain.value == password.value){
+                r3 = true;
+            }else{
+                r3 = false;
+            }
+           flag3 =  checkColorChange(r3,h3,'密码输入一致',passwordAgain,flag3, '密码输入不一致');
+        }
+
+        //part4邮箱部分
+        email.onfocus = function (){
+            focusColor(h4,'填写正确的邮箱格式！');
+
+        }
+        email.onblur = function (){
+            var emailReg=/^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/;
+            var r4= emailReg.test(email.value)
+            flag4 = checkColorChange(r4,h4,'邮箱格式正确',email,flag4, '邮箱格式不正确');
+        }
+
+        //part5手机部分
+        phone.onfocus = function (){
+            focusColor(h5,'填写正确的手机号码！');
+        }
+        phone.onblur = function (){
+            var phoneReg = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/;
+            var r5 = phoneReg.test(phone.value);
+           flag5 =  checkColorChange(r5,h5,'号码格式正确',phone,flag5, '号码格式不正确');
+        }
+
+        btn.onclick = function(){
+            console.log(flag1);
+            if(flag1 ===true& flag2 ===true& flag3===true & flag4 ===true & flag5 ===true){
+                alert('提交成功！');
+            }else{
+                alert('提交失败！');
+            }
+        }
+
+
+    }
+</script>
+</body>
+</html>
