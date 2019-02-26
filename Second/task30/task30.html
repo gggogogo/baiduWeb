@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多个表单项的动态验证</title>
+    <style>
+       .container{
+           width: 500px;
+           height: 800px;
+           margin: 0 auto;
+       }
+       .hint{
+           display: none;
+       }
+       td{
+           text-align: right;
+           padding: 10px;
+       }
+       .describe{
+           text-align: center;
+           color: grey;
+       }
+       input{
+           width: 300px;
+           height: 30px;
+       }
+        .red{
+            border-color: red;
+        }
+        .green{
+            border-color: green;
+        }
+
+    </style>
+</head>
+<body>
+
+   <div class="container">
+       <form id = "form" action="">
+           <table>
+               <tr>
+                   <td>名称</td>
+                   <td>
+                       <input type="text" id="name">
+                   </td>
+               </tr>
+               <tr >
+                   <td></td>
+                   <td class="discribe"></td>
+               </tr>
+               <tr>
+                    <td>密码</td>
+                    <td>
+                        <input type="text" id="password1">
+                    </td>
+                </tr>
+                <tr>
+                        <td></td>
+                        <td class="discribe"></td>
+                </tr>
+                <tr>
+                        <td>确认密码</td>
+                        <td>
+                            <input type="text" id="password2" rule="">
+                        </td>
+                    </tr>
+                    <tr >
+                            <td></td>
+                            <td class="discribe"></td>
+                        </tr>
+                    <tr>
+                            <td>邮箱</td>
+                            <td>
+                                <input type="text" id="email">
+                            </td>
+                        </tr>
+                        <tr >
+                                <td></td>
+                                <td class="discribe"></td>
+                            </tr>
+                        <tr>
+                                <td>手机</td>
+                                <td>
+                                    <input type="text" id="phone">
+                                </td>
+                            </tr>
+                            <tr class="hint">
+                                    <td></td>
+                                    <td class="discribe"></td>
+                                </tr>
+           </table>
+           <button id="submit">点击提交</button>
+       </form>
+   </div>
+  <script src="task30.js"></script>
+</body>
+</html>

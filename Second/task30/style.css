@@ -1,0 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.hint{
+    height: 30px;
+    display: none;
+}

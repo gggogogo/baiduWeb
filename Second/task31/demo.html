@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单联动</title>
+    <style>
+      
+      
+
+        .hide{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <div id="radio_select">
+                在校生<input type="radio" name="isStudent" id="is_student" checked="checked">
+                非在校生<input type="radio" name="isStudent" id="no_student">
+        </div>
+
+        <div id="choice_school" >
+            <select name="city" id="city" class="">
+                <option value="BJ">北京</option>
+                <option value="SH">上海</option>
+                <option value="NJ">南京</option>
+            </select>
+            <select name="school" id="school">
+                <option value="PKU">北京大学</option>
+                <option value="THU">清华大学</option>
+            </select>
+          
+        </div>
+        <div id="no_school" class="hide">
+            <input type="text" id="input">
+        </div>
+       
+
+    </form>
+    <script src="demo.js"></script>
+</body>
+</html>

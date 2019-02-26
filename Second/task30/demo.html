@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>任务30重写</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="" id="form_valid">
+            <section>
+                用户名
+                <input type="text" id="username" strategies="isNoEmpty Length">
+                <p class="hint">密码4~16位,中文符号长度为2</p>
+            </section>
+            <section>
+                密码
+                <input type="text" id="password" strategies="isNoEmpty Length">
+                <p class="hint">密码为4-16位英文字母，数字，英文符号</p>
+            </section>
+            <section>
+                确认密码
+                <input type="text" id="password_confirm" strategies="isNoEmpty isNoSame">
+                <p class="hint">请输入相同密码x</p>
+            </section>
+            <section>
+                邮箱
+                <input type="text" id="email" strategies="isNoEmpty isEmail">
+                <p class="hint">xxx@xx.xx</p>
+            </section>
+            <section>
+                手机号
+                <input type="text" id="phone_number" strategies="isNoEmpty isMobile">
+                <p class="hint">请输入11位手机号</p>
+                
+            </section>
+            <button>点击确认</button>
+        </form>
+    </div>
+    <script src="base.js"></script>
+    <script src="demo.js"></script>
+</body>
+</html>

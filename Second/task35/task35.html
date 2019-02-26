@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>听指令的小方块（三）</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;        }
+    #map_table{
+        border-spacing: 0px;
+        border: 1px solid black;
+        margin: 50px auto;
+        position: relative;
+        
+    }
+    td{
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+        box-sizing: border-box;
+    }
+    .BLOCK{
+        width: 50px;
+        height: 50px;
+        box-sizing: border-box;
+        background-color: red;
+    }
+    .TOP{
+        border-top: 10px solid blue;
+    }
+    .LEF{
+        border-left: 10px solid blue;
+    }
+    .RIG{
+        border-right: 10px solid blue;
+    }
+    .BOT{
+        border-bottom: 10px solid blue;
+    }
+    #console_div{
+        position: absolute;
+        left: 300px;
+        top: 50px;
+        width: 200px;
+        height: 500px;
+        border: 1px solid black;
+        overflow: hidden;
+    }
+    #command_list{
+        position: absolute;
+        left: 50px;
+        top: 50px;
+    }
+    button{
+        position: absolute;
+        left: 100px;
+        top: 250px;
+        width: 50px;
+    }
+    </style>
+</head>
+<body>
+    <div id="map">
+        <table id="map_table">
+
+        </table>
+    </div>
+    <textarea name="" id="command_list" cols="30" rows="10"></textarea>
+    <button >执行</button>
+    <div id="console_div"></div>
+
+    <script src="task35.js"></script>
+</body>
+</html>
