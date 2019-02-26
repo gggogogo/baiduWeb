@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>听指令的小方块</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 300px;
+            margin: 200px auto;
+        }
+
+        table {
+            border: 1px solid black;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+        }
+
+        .move_block {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            box-sizing: border-box;
+        }
+
+        .top {
+            border-top: 10px solid blue;
+        }
+
+        .bottom {
+            border-bottom: 10px solid blue;
+        }
+
+        .left {
+            border-left: 10px solid blue;
+        }
+
+        .right {
+            border-right: 10px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+            </tr>
+            <tr>
+                <td ></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td ></td>
+            </tr>
+            <tr>
+                <td ></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td ></td>
+            </tr>
+            <tr>
+                <td ></td>
+                <td></td>
+                <td>
+                    <div class="move_block top">
+
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td ></td>
+            </tr>
+            <tr>
+                <td class="boundary"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="boundary"></td>
+            </tr>
+            <tr>
+                    <td ></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td ></td>
+            </tr>
+        </table>
+    </div>
+    <button id="go">Go</button>
+    <div id="direction_button">
+            
+            <button id="left">LEFT</button>
+            <button id="right">RIght</button>
+            <button id="top">top</button>
+            <button id="bottom">bottom</button>
+    </div>
+ 
+    <script src="task33.js"></script>
+</body>
+
+</html>

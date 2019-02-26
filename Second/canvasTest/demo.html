@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .picture {
+            position: relative;
+            width: 800px;
+            height: 800px;
+            box-sizing: content-box;
+            border: 1px solid rgb(222, 222, 222);
+
+        }
+
+        .picture canvas {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        .picture #canvasBg {
+            z-index: 2;
+        }
+
+        .picture #canvasFg {
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <img src= "" width = "" height = "" alt=""> -->
+
+    <div class="picture">
+        <canvas id="canvasBg" width="800" height="800">
+        </canvas>
+        <canvas id="canvasFg" width="800" height="800">
+        </canvas>
+    </div>
+
+    <img src="img/min-iconfont-planet.png" alt="" hidden>
+    <img src="img/min-iconfont-rocket-active.png" alt="" hidden>
+    <script src="./demo.js"></script>
+</body>
+
+</html>

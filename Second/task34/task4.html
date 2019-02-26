@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>听指令的小方块</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 400px;
+            height: 300px;
+            margin: 200px auto;
+        }
+
+        table {
+            border: 1px solid black;
+            border-spacing: 0;
+            position: relative;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+
+        @keyframes ani_left{
+
+        }
+        #move_block {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-top: 10px solid blue;
+            box-sizing: border-box;
+            position: absolute;
+            transition: all 1s;
+
+            animation: ani_left 1s linear;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td><div id="move_block" style=" left: 0px;  top: 0px; transform:rotateZ(0)" class="">
+
+                </div></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td ></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+         
+        </table>
+    </div>
+    <div id="tra">
+        <button id="tra_left" class="left">TRA LEFT</button>
+        <button id="tra_right" class="right">TRARIght</button>
+        <button id="tra_top" class="top">TRAtop</button>
+        <button id="tar_bottom" class="bottom">TRAbottom</button>
+    </div>
+    <div id="move">
+
+        <button id="mov_left" class="left">MOV LEFT</button>
+        <button id="mov_right" class="right">MOVRIght</button>
+        <button id="mov_top" class="top">MOVtop</button>
+        <button id="mov_bottom" class="bottom">MOVbottom</button>
+    </div>
+
+    <script src="task34.js"></script>
+</body>
+
+</html>
